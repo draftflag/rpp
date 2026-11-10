@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel='icon' href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%9A%3C/text%3E%3C/svg%3E">
+<title>Reden Pagal, RMEE – Mechanical engineer and tool builder</title>
+<meta name="description" content="Portfolio of Reden Pagal, RMEE: CAD and analysis, engineering tools, and transport compliance. Drive the kei truck to explore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='css/styles.css'>
+</head>
+<body>
+<header><b>Reden Pagal, RMEE</b><button id="mode" aria-pressed="false" type="button">Drive mode (3D)</button></header>
+<canvas id="c" aria-hidden="true"></canvas>
+<div id="spacer" aria-hidden="true"></div>
+<main>
+<section class="stop" id="garage" data-t=".04" aria-labelledby="h0">
+ <h1 id="h0">Reden Pagal, RMEE</h1>
+ <p>Mechanical engineer in Cebu City who builds the tools his field is missing: calculators, reference apps and automation for engineering and transport compliance.</p>
+ <p>Scout and volunteer at heart: Boy Scouts of the Philippines, Eagle Scouts of Palawan and Gawad Kalinga.</p>
+ <p class="m">Scroll to drive the truck. The stops below the screen jump you ahead. Click the truck to change its car or color.</p>
+ <div class="row"><button class="pri" type="button" data-go="1">Start the drive</button><a class="btn" href="https://grabcad.com/pagal.reden.parangan-1" target="_blank" rel="noopener">GrabCAD models</a><a class="btn" href="https://www.linkedin.com/in/reden-p-4937133a7/" target="_blank" rel="noopener">LinkedIn</a></div>
+</section>
+<section class="stop" id="workshop" data-t=".28" aria-labelledby="h1">
+ <h2 id="h1">Workshop: CAD and analysis</h2>
+ <p>I model and analyse in SOLIDWORKS (FEA and CFD) and AutoCAD, with SinuTrain, FluidSIM, SketchUp and Photoshop for the rest. I read structural plans and building schematics before I touch a model.</p>
+ <p>Bachelor of Science in Mechanical Engineering, Cebu Institute of Technology – University, 2018 to 2023.</p>
+ <p>Selected work on GrabCAD:</p>
+ <ul>
+  <li>CFD sample: applying an external fan</li>
+  <li>CFD report: missile</li>
+  <li>CFD report: textile machine</li>
+  <li>Candle maker (modified model)</li>
+  <li>Bolt stress analysis components for FEA</li>
+  <li>LEGO mold (reference, dimensions adjustable)</li>
+  <li>Multi-cavity mold and die (reference, dimensions adjustable)</li>
+ </ul>
+ <div class="row"><a class="btn pri" href="https://grabcad.com/pagal.reden.parangan-1" target="_blank" rel="noopener">Browse my GrabCAD models</a></div>
+</section>
+<section class="stop" id="devyard" data-t=".5" aria-labelledby="h2">
+ <h2 id="h2">Dev yard: tools I build</h2>
+ <ul>
+  <li><b>Submission portal auto-fill.</b> Populates portal fields from one data source, cutting manual intake time and typos.</li>
+  <li><b>Wheelchair tie-down and upper sash point reference.</b> A web app with quick specs and compliance guidance.</li>
+  <li><b>Structural beam calculator.</b> Load evaluation and stress checks for a defined design specification.</li>
+  <li><b>Inspection-sheet calculator.</b> Live calculations inside a field checklist, so QA verifies on the spot.</li>
+ </ul>
+ <p>Built with Python, TypeScript, HTML/CSS and C++, shipped through GitHub and Vercel, with Claude, ChatGPT and Gemini in the workflow. Proficient in the Microsoft Office suite.</p>
+ <p class="m">Demos are generic recreations. They contain no client data.</p>
+</section>
+<section class="stop" id="weighbridge" data-t=".72" aria-labelledby="h3">
+ <h2 id="h3">Weighbridge: compliance and training</h2>
+ <p>Day to day: data management, quality assurance, transport compliance and process administration.</p>
+ <ul>
+  <li>NHVR industry sessions, May 2026: mass, dimension and loading; accreditation and safety management; performance-based standards; fatigue management.</li>
+  <li>Austroads webinars on movement and place, sustainability of technical specifications, ITS outage response and pavement technology.</li>
+  <li>Truck Mass Analysis Workshop (June) and Lucid process and planning training.</li>
+  <li>5th PSME Mechanical Design and Fabrication Technology Conference, August 2025, CPD points earned.</li>
+ </ul>
+</section>
+<section class="stop" id="depot" data-t=".96" aria-labelledby="h4">
+ <h2 id="h4">Depot: get in touch</h2>
+ <p>Hiring for engineering, automation or compliance tooling, or need a calculator built? Email me and I will reply with questions and a plan.</p>
+ <p><b>Reden Pagal, RMEE</b><br>Cebu City, Cebu</p>
+ <div class="row"><a class="btn pri" href="mailto:redenpagal@gmail.com">redenpagal@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/reden-p-4937133a7/" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://grabcad.com/pagal.reden.parangan-1" target="_blank" rel="noopener">GrabCAD</a></div>
+</section>
+</main>
+<div id='fade'></div>
+<div id='toast' role='status' aria-live='polite'></div>
+<div class='pop' id='lb'><div class='card' style='padding:14px;width:min(900px,94vw)'><button type='button' class='x' data-close aria-label='Close'>×</button><img id='lbimg' alt='' style='width:100%;height:auto;max-height:80vh;object-fit:contain;display:block;border-radius:10px;background:#fff'></div></div>
+<div class='pop' id='ride'><div class='card'><button type='button' class='x' data-close aria-label='Close'>×</button><h2>Your ride</h2><p id='rideNow'></p><div class='row'><button class='btn pri' type='button' id='rcar'>Change car</button><button class='btn pri' type='button' id='rcol'>Change color</button></div><div id='rpane'></div></div></div>
+<div class='inside' id='in0'><div class='card'><h2>Welcome to the garage</h2><p>Hi, I’m Reden Pagal, RMEE: a mechanical engineer in Cebu City who models, analyses and then builds the small tools a job is missing.</p><h3>What I bring</h3><ul><li>Proactive, analytical and critical problem-solving</li><li>Technical and cross-functional communication</li><li>Collaborative teamwork and active engagement</li><li>Adaptability, resilience and a strong work ethic</li></ul><h3>Service and community</h3><ul><li>Member, Boy Scouts of the Philippines, September 2010, Bataraza, Palawan</li><li>Member, Eagle Scouts of Palawan (ESP), September 2015, Brgy. Sta. Monica, Puerto Princesa City, Palawan</li><li>Volunteer, Gawad Kalinga, October 2016, Rio Tuba, Bataraza, Palawan</li></ul><h3>Where I studied</h3><ul><li>BS Mechanical Engineering, Cebu Institute of Technology – University, 2018 to 2023</li><li>Senior high (STEM) and junior high, Leonides S. Virata Memorial School, Bataraza, Palawan, 2012 to 2018, with high honors</li></ul><div class='row'><button class='btn pri' type='button' data-exit>Drive back out</button></div></div><aside class='notes'><p class='note'>Based in Cebu City, Cebu</p><p class='note'>BSME, class of 2023</p><p class='note'>Eagle Scouts of Palawan, 2015</p></aside></div>
+<div class='inside' id='in1'><div class='card'><h2>Inside the workshop</h2><p>Everything starts as a drawing. I model in SOLIDWORKS, test with FEA and CFD, and read the plans before I touch a model.</p><h3>Tools</h3><ul><li>SOLIDWORKS with FEA and CFD</li><li>AutoCAD, SketchUp and Photoshop</li><li>SinuTrain and FluidSIM</li><li>Reading structural and design plans and building schematics</li></ul><h3>On my GrabCAD profile</h3><ul><li>CFD sample: applying an external fan</li><li>CFD report: missile</li><li>CFD report: textile machine</li><li>Candle maker (modified model)</li><li>Bolt stress analysis components for FEA</li><li>LEGO mold (reference, dimensions adjustable)</li><li>Multi-cavity mold and die (reference, dimensions adjustable)</li></ul><div class='row'><button class='btn pri' type='button' data-exit>Drive back out</button><a class='btn' href='https://grabcad.com/pagal.reden.parangan-1' target='_blank' rel='noopener'>GrabCAD</a></div></div><aside class='notes'><p class='note'>7 featured works on GrabCAD</p><p class='note'>FEA and CFD in one toolbox</p><p class='note'>Mold and die references with adjustable dimensions</p></aside></div>
+<div class='inside' id='in2'><div class='card'><h2>Inside the dev yard</h2><p>The small tools I build so a job stops repeating itself.</p><ul><li><b>Submission portal auto-fill.</b> Populates portal fields from one data source, cutting manual intake time and typos.</li><li><b>Wheelchair tie-down and upper sash point reference.</b> A web app with quick specs and compliance guidance.</li><li><b>Structural beam calculator.</b> Load evaluation and stress checks for a defined design specification.</li><li><b>Inspection-sheet calculator.</b> Live calculations inside a field checklist, so QA verifies on the spot.</li></ul><h3>Stack</h3><p>Python, TypeScript, C++, HTML and CSS, Google web app drafting, GitHub, Vercel and v0.dev, with Claude prompt engineering and multi-LLM integration. Proficient in the Microsoft Office suite.</p><div class='row'><button class='btn pri' type='button' data-exit>Drive back out</button></div></div><aside class='notes'><p class='note'>4 tools built</p><p class='note'>Ships through GitHub and Vercel</p><p class='note'>Demos are generic, no client data</p></aside></div>
+<div class='inside' id='in3'><div class='card'><h2>Inside the weighbridge cabin</h2><p>Day to day: data management, quality assurance, transport compliance and process administration. The full logbook:</p><details open><summary><b>Certificates and publications</b></summary><div class='creds'><figure class='cert'><img data-cert='ansys' alt='Certificate of participation: Applications of Ansys FEA and CFD in Energy, HVAC, and Manufacturing' width='1100' height='777'><figcaption><b>Applications of Ansys FEA and CFD in Energy, HVAC, and Manufacturing</b><br>CAD-IT Consultants, certificate of participation, completed 30 August 2025 (certification no. 25090010427)</figcaption></figure><figure class='cert'><img data-cert='ijisrt' alt='IJISRT author certificate for Novel Gas Cylinder Trolley with Ergonomic Lifting and Placement Adjustments' width='820' height='1160'><figcaption><b>Novel Gas Cylinder Trolley with Ergonomic Lifting and Placement Adjustments</b><br>Published in the International Journal of Innovative Science and Research Technology, Volume 7, Issue 8, August 2022 (article IJISRT22AUG983, ISSN 2456-2165)</figcaption></figure></div></details><details open><summary><b>NHVR industry information sessions, May 2026</b></summary><ul><li>May 6: Mass, Dimension and Loading</li><li>May 13: Accreditation and Safety Management Systems</li><li>May 20: Performance-Based Standards</li><li>May 27: Fatigue Management, Work Diaries and Unfit Provisions</li></ul></details><details><summary><b>Austroads webinars</b></summary><ul><li>Movement and Place Guidance</li><li>Sustainability Review of Technical Specifications (Sep 2025)</li><li>TMC Response to ITS Outages (Oct 2025)</li><li>Guide to Pavement Technology (Asphalt)</li><li>CWANZ Walking and Cycling Participation Survey</li></ul></details><details><summary><b>Workshops and process training</b></summary><ul><li>Truck Mass Analysis Workshop (Jun 3)</li><li>Technology Industry Group Meeting (Jul 29)</li><li>Lucid: Flexible Planning (Apr 30), Streamlining Planning (Jun 25), Building Business Process Diagrams (Jul 30)</li></ul></details><details><summary><b>Conferences and seminars</b></summary><ul><li>5th PSME Mechanical Design and Fabrication Technology Division Conference (Aug 2025, CPD points earned)</li><li>Customer Service Training Seminar (Jun 2024)</li><li>Fire Life Safety Seminar, BFP (Mar 2022)</li><li>Mindset Matters: from Researcher to Entrepreneur, Knowledge and Technology Transfer Office (Mar 4, 2022, MS Teams)</li><li>GenLit: Kabataang Pinuno, Pinas Forward (Jun 26, 2021, Zoom)</li><li>Workshop on Patent Information Search for Students, Innovation and Technology Support Office (Apr 24, 2021, Zoom)</li></ul></details><div class='row'><button class='btn pri' type='button' data-exit>Drive back out</button></div></div><aside class='notes'><p class='note'>4 NHVR sessions in May 2026</p><p class='note'>CPD points earned at PSME 2025</p><p class='note'>Truck mass analysis workshop</p></aside></div>
+<div class='inside' id='in4'><div class='card'><h2>Welcome to the depot</h2><p>Hiring for engineering, automation or compliance tooling, or need a calculator built? Email me and I will reply with questions and a plan.</p><p><a class='big' style='font-size:clamp(20px,2.6vw,30px)' href='mailto:redenpagal@gmail.com'>redenpagal@gmail.com</a></p><p>Reden Pagal, RMEE<br>Cebu City, Cebu</p><div class='row'><a class='btn' href='https://www.linkedin.com/in/reden-p-4937133a7/' target='_blank' rel='noopener'>LinkedIn</a><a class='btn' href='https://grabcad.com/pagal.reden.parangan-1' target='_blank' rel='noopener'>GrabCAD</a><button class='btn pri' type='button' data-exit>Drive back out</button></div></div><aside class='notes'><p class='note'>redenpagal@gmail.com</p><p class='note'>Cebu City, Cebu</p><p class='note'>I reply with questions and a plan</p></aside></div>
+
+<div id='p2d'>
+<div class='st' id='s0'>
+ <section class='hero'>
+  <div class='in'>
+   <p style='color:#aab4bf;margin:0 0 12px'>Cebu City, Philippines</p>
+   <h1>Reden <span>Pagal</span></h1>
+   <p class='lead'>Mechanical engineer. I model, analyse and build the small tools a job is missing.</p>
+   <ul class='facts'><li><b>4</b>tools built</li><li><b>7</b>featured CAD works</li><li><b>4</b>NHVR sessions, May 2026</li><li><b>2023</b>BSME graduate</li></ul>
+  </div>
+  
+ </section>
+ <div class='mq' aria-hidden='true'><div>SOLIDWORKS FEA / SOLIDWORKS CFD / AutoCAD / SinuTrain / FluidSIM / SketchUp / Python / TypeScript / C++ / GitHub / Vercel / Quality assurance / Transport compliance / Data management / Microsoft Office / SOLIDWORKS FEA / SOLIDWORKS CFD / AutoCAD / SinuTrain / FluidSIM / SketchUp / Python / TypeScript / C++ / GitHub / Vercel / Quality assurance / Transport compliance / Data management / Microsoft Office / </div></div>
+ <section><div class='in'>
+  <p class='no'>Stop 01 / Garage</p><h2>From plan to working tool</h2>
+  <p>I read structural and design plans, model them in SOLIDWORKS, and check them with FEA and CFD. Then I script whatever repeats: calculators, reference apps and automation for engineering and transport compliance.</p>
+  <div class='row'><a class='btn pri' href='#s1' data-go='1'>Start with the workshop</a><a class='btn' href='https://www.linkedin.com/in/reden-p-4937133a7/' target='_blank' rel='noopener'>LinkedIn</a></div>
+ </div></section>
+</div>
+<div class='st' id='s1'><section><div class='in'>
+ <p class='no'>Stop 02 / Workshop</p><h2>CAD and analysis</h2>
+ <p>SOLIDWORKS (FEA and CFD), AutoCAD, SinuTrain, FluidSIM, SketchUp and Photoshop. Selected work from my GrabCAD profile:</p>
+ <ul class='plates'>
+  <li class='plate'><span>CFD sample</span><h3>Applying an external fan</h3></li>
+  <li class='plate'><span>CFD report</span><h3>Missile</h3></li>
+  <li class='plate'><span>CFD report</span><h3>Textile machine</h3></li>
+  <li class='plate'><span>Model</span><h3>Candle maker (modified model)</h3></li>
+  <li class='plate'><span>FEA</span><h3>Bolt stress analysis components</h3></li>
+  <li class='plate'><span>Mold, reference</span><h3>LEGO mold, dimensions adjustable</h3></li>
+  <li class='plate'><span>Mold, reference</span><h3>Multi-cavity mold and die, dimensions adjustable</h3></li>
+ </ul>
+ <p><a class='btn pri' href='https://grabcad.com/pagal.reden.parangan-1' target='_blank' rel='noopener'>Browse all on GrabCAD</a></p>
+ <h3 style='margin-top:40px'>Record</h3>
+ <p>Bachelor of Science in Mechanical Engineering, Cebu Institute of Technology – University, 2018 to 2023.<br>Senior high (STEM) and junior high, Leonides S. Virata Memorial School, Bataraza, Palawan, 2012 to 2018, with high honors.</p>
+ <h3 style='margin-top:40px'>Service and community</h3>
+ <ul><li>Member, Boy Scouts of the Philippines, September 2010, Bataraza, Palawan</li><li>Member, Eagle Scouts of Palawan (ESP), September 2015, Brgy. Sta. Monica, Puerto Princesa City, Palawan</li><li>Volunteer, Gawad Kalinga, October 2016, Rio Tuba, Bataraza, Palawan</li></ul>
+</div></section></div>
+<div class='st' id='s2'><section><div class='in'>
+ <p class='no'>Stop 03 / Dev yard</p><h2>Tools I build</h2>
+ <div class='tool'><span class='n'>01</span><div><h3>Submission portal auto-fill</h3><p>Populates portal fields from one data source, cutting manual intake time and typos.</p><span class='t'>Automation</span><span class='t'>Data intake</span></div></div>
+ <div class='tool'><span class='n'>02</span><div><h3>Wheelchair tie-down and upper sash point reference</h3><p>A web app with quick specs and compliance guidance.</p><span class='t'>Reference app</span><span class='t'>Compliance</span></div></div>
+ <div class='tool'><span class='n'>03</span><div><h3>Structural beam calculator</h3><p>Load evaluation and stress checks for a defined design specification.</p><span class='t'>Calculator</span><span class='t'>Structural</span></div></div>
+ <div class='tool'><span class='n'>04</span><div><h3>Inspection-sheet calculator</h3><p>Live calculations inside a field checklist, so QA verifies on the spot.</p><span class='t'>Field QA</span><span class='t'>Inspection</span></div></div>
+ <p class='m'>Demos are generic recreations. They contain no client data.</p>
+ <h3 style='margin-top:48px'>Cargo</h3>
+ <p class='m'>Each tag is a skill. Drag them around, or focus one and use the arrow keys.</p>
+ <div class='yard' id='yard'>
+  <span class='tag'>SOLIDWORKS FEA</span><span class='tag'>SOLIDWORKS CFD</span><span class='tag'>AutoCAD</span><span class='tag'>SinuTrain</span><span class='tag'>FluidSIM</span><span class='tag'>SketchUp</span><span class='tag'>Reading plans and schematics</span><span class='tag'>Python</span><span class='tag'>TypeScript</span><span class='tag'>C++</span><span class='tag'>HTML and CSS</span><span class='tag'>GitHub</span><span class='tag'>Vercel</span><span class='tag'>Claude prompt engineering</span><span class='tag'>Multi-LLM workflow</span><span class='tag'>Data management</span><span class='tag'>Quality assurance</span><span class='tag'>Transport compliance</span><span class='tag'>Process administration</span><span class='tag'>Microsoft Office suite</span><span class='tag'>Problem-solving</span><span class='tag'>Technical communication</span><span class='tag'>Teamwork</span><span class='tag'>Adaptability</span><span class='tag'>Work ethic</span>
+ </div>
+ <button type='button' id='reload'>Reload cargo</button>
+</div></section></div>
+<div class='st' id='s3'><section><div class='in log'>
+ <p class='no'>Stop 04 / Weighbridge</p><h2>Compliance and training</h2>
+ <p>Day to day: data management, quality assurance, transport compliance and process administration. The logbook:</p>
+ <details open><summary>Certificates and publications</summary><div class='creds'><figure class='cert'><img data-cert='ansys' alt='Certificate of participation: Applications of Ansys FEA and CFD in Energy, HVAC, and Manufacturing' width='1100' height='777'><figcaption><b>Applications of Ansys FEA and CFD in Energy, HVAC, and Manufacturing</b><br>CAD-IT Consultants, certificate of participation, completed 30 August 2025 (certification no. 25090010427)</figcaption></figure><figure class='cert'><img data-cert='ijisrt' alt='IJISRT author certificate for Novel Gas Cylinder Trolley with Ergonomic Lifting and Placement Adjustments' width='820' height='1160'><figcaption><b>Novel Gas Cylinder Trolley with Ergonomic Lifting and Placement Adjustments</b><br>Published in the International Journal of Innovative Science and Research Technology, Volume 7, Issue 8, August 2022 (article IJISRT22AUG983, ISSN 2456-2165)</figcaption></figure></div></details><details open><summary>NHVR industry information sessions, May 2026</summary><ul><li>May 6: Mass, Dimension and Loading</li><li>May 13: Accreditation and Safety Management Systems</li><li>May 20: Performance-Based Standards</li><li>May 27: Fatigue Management, Work Diaries and Unfit Provisions</li></ul></details>
+ <details><summary>Austroads technology and strategy webinars</summary><ul><li>Movement and Place Guidance</li><li>Sustainability Review of Technical Specifications (Sep 2025)</li><li>TMC Response to ITS Outages (Oct 2025)</li><li>Guide to Pavement Technology (Asphalt)</li><li>CWANZ Walking and Cycling Participation Survey</li></ul></details>
+ <details><summary>Industry workshops and process training</summary><ul><li>Truck Mass Analysis Workshop (Jun 3)</li><li>Technology Industry Group Meeting (Jul 29)</li><li>Lucid: Flexible Planning Workshop (Apr 30)</li><li>Lucid: Streamlining Planning Workshop (Jun 25)</li><li>Lucid: Building Business Process Diagrams (Jul 30)</li></ul></details>
+ <details><summary>Conferences and seminars</summary><ul><li>5th PSME Mechanical Design and Fabrication Technology Division Conference (Aug 2025, CPD points earned)</li><li>Customer Service Training Seminar (Jun 2024)</li><li>Fire Life Safety Seminar, BFP (Mar 2022)</li><li>Mindset Matters: from Researcher to Entrepreneur, Knowledge and Technology Transfer Office (Mar 4, 2022, MS Teams)</li><li>GenLit: Kabataang Pinuno, Pinas Forward (Jun 26, 2021, Zoom)</li><li>Workshop on Patent Information Search for Students, Innovation and Technology Support Office (Apr 24, 2021, Zoom)</li></ul></details>
+</div></section></div>
+<div class='st' id='s4'><section><div class='in'>
+ <p class='no'>Stop 05 / Depot</p><h2>Let us talk</h2>
+ <p>Hiring for engineering, automation or compliance tooling, or need a calculator built? Email me and I will reply with questions and a plan.</p>
+ <a class='big' href='mailto:redenpagal@gmail.com'>redenpagal@gmail.com</a>
+ <div class='row'><button type='button' class='pri' id='copy'>Copy email</button><a class='btn' href='https://www.linkedin.com/in/reden-p-4937133a7/' target='_blank' rel='noopener'>LinkedIn</a><a class='btn' href='https://grabcad.com/pagal.reden.parangan-1' target='_blank' rel='noopener'>GrabCAD</a></div>
+ <p class='m' style='margin-top:48px'>Reden Pagal, RMEE. Cebu City, Cebu.</p>
+</div></section></div>
+</div>
+<nav id="chips" aria-label="Checkpoints">
+<button type="button">Garage</button><button type="button">Workshop</button><button type="button">Dev yard</button><button type="button">Weighbridge</button><button type="button">Depot</button>
+</nav>
+<script src='vendor/three.min.js'></script>
+<script src='js/main.js'></script>
+</body>
+</html>
